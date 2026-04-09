@@ -1,0 +1,75 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "boundary_id": "B-1",
+        "school_id": "SCH-01",
+        "school_name": "Riverdale Elementary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.98,
+              35.99
+            ],
+            [
+              -78.95,
+              35.99
+            ],
+            [
+              -78.95,
+              36.05
+            ],
+            [
+              -78.98,
+              36.05
+            ],
+            [
+              -78.98,
+              35.99
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "boundary_id": "B-2",
+        "school_id": "SCH-02",
+        "school_name": "Oakridge Elementary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.95,
+              35.99
+            ],
+            [
+              -78.92,
+              35.99
+            ],
+            [
+              -78.92,
+              36.05
+            ],
+            [
+              -78.95,
+              36.05
+            ],
+            [
+              -78.95,
+              35.99
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

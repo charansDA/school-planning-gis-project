@@ -1,0 +1,15 @@
+School Planning Analysis Memo
+================================
+
+Project summary:
+This prototype geocodes student points, assigns them to planning units and school attendance boundaries, and summarizes enrollment pressure for district planning.
+
+Key findings:
+1. Oakridge Elementary has 97 students against a capacity of 170 (57.1% utilization), making it the highest-pressure campus.
+2. Northeast Redevelopment Area is the strongest growth area with an expected growth rate of 9.3% and currently feeds Oakridge Elementary.
+3. This workflow creates reusable outputs for planning memos, dashboard tables, and school locator maintenance.
+
+Recommended next steps:
+- Validate addresses before geocoding to reduce assignment errors.
+- Monitor redevelopment-heavy planning units each semester.
+- Review whether attendance boundary adjustments or capacity changes are needed.

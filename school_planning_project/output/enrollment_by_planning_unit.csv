@@ -1,0 +1,5 @@
+planning_unit_id,name,expected_growth_pct,school_name,student_count
+PU-201,Northeast Redevelopment Area,9.3,Oakridge Elementary,64
+PU-101,Northwest Growth Area,7.5,Riverdale Elementary,49
+PU-202,Southeast Stable Area,3.0,Oakridge Elementary,33
+PU-102,Southwest Stable Area,2.1,Riverdale Elementary,32

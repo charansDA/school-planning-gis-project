@@ -1,0 +1,3 @@
+school_id,school_name,student_count,capacity,principal,utilization_pct,status
+SCH-02,Oakridge Elementary,97,170,L. Carter,57.1,Healthy
+SCH-01,Riverdale Elementary,81,185,A. Brooks,43.8,Healthy

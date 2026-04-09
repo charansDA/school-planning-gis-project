@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "planning_unit_id": "PU-101",
+        "name": "Northwest Growth Area",
+        "expected_growth_pct": 7.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.98,
+              36.02
+            ],
+            [
+              -78.95,
+              36.02
+            ],
+            [
+              -78.95,
+              36.05
+            ],
+            [
+              -78.98,
+              36.05
+            ],
+            [
+              -78.98,
+              36.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "planning_unit_id": "PU-102",
+        "name": "Southwest Stable Area",
+        "expected_growth_pct": 2.1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.98,
+              35.99
+            ],
+            [
+              -78.95,
+              35.99
+            ],
+            [
+              -78.95,
+              36.02
+            ],
+            [
+              -78.98,
+              36.02
+            ],
+            [
+              -78.98,
+              35.99
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "planning_unit_id": "PU-201",
+        "name": "Northeast Redevelopment Area",
+        "expected_growth_pct": 9.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.95,
+              36.02
+            ],
+            [
+              -78.92,
+              36.02
+            ],
+            [
+              -78.92,
+              36.05
+            ],
+            [
+              -78.95,
+              36.05
+            ],
+            [
+              -78.95,
+              36.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "planning_unit_id": "PU-202",
+        "name": "Southeast Stable Area",
+        "expected_growth_pct": 3.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.95,
+              35.99
+            ],
+            [
+              -78.92,
+              35.99
+            ],
+            [
+              -78.92,
+              36.02
+            ],
+            [
+              -78.95,
+              36.02
+            ],
+            [
+              -78.95,
+              35.99
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

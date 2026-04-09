@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8c0296641fb289cc49fd81a20b50b511 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8c0296641fb289cc49fd81a20b50b511" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8c0296641fb289cc49fd81a20b50b511 = L.map(
+                "map_8c0296641fb289cc49fd81a20b50b511",
+                {
+                    center: [36.025, -78.95],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b8bae55840d61e1c0bf8d28c9fc44e2d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b8bae55840d61e1c0bf8d28c9fc44e2d.addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        function geo_json_0ebe7e188aa69b71198e92a46b4efc45_styler(feature) {
+            switch(feature.properties.boundary_id) {
+                default:
+                    return {"color": "black", "fillColor": "#1a9850", "fillOpacity": 0.45, "weight": 2};
+            }
+        }
+
+        function geo_json_0ebe7e188aa69b71198e92a46b4efc45_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0ebe7e188aa69b71198e92a46b4efc45 = L.geoJson(null, {
+                onEachFeature: geo_json_0ebe7e188aa69b71198e92a46b4efc45_onEachFeature,
+            
+                style: geo_json_0ebe7e188aa69b71198e92a46b4efc45_styler,
+            ...{
+}
+        });
+
+        function geo_json_0ebe7e188aa69b71198e92a46b4efc45_add (data) {
+            geo_json_0ebe7e188aa69b71198e92a46b4efc45
+                .addData(data);
+        }
+            geo_json_0ebe7e188aa69b71198e92a46b4efc45_add({"features": [{"geometry": {"coordinates": [[[-78.98, 35.99], [-78.95, 35.99], [-78.95, 36.05], [-78.98, 36.05], [-78.98, 35.99]]], "type": "Polygon"}, "properties": {"boundary_id": "B-1", "capacity": 185, "school_id": "SCH-01", "school_name": "Riverdale Elementary", "status": "Healthy", "student_count": 81, "utilization_pct": 43.8}, "type": "Feature"}, {"geometry": {"coordinates": [[[-78.95, 35.99], [-78.92, 35.99], [-78.92, 36.05], [-78.95, 36.05], [-78.95, 35.99]]], "type": "Polygon"}, "properties": {"boundary_id": "B-2", "capacity": 170, "school_id": "SCH-02", "school_name": "Oakridge Elementary", "status": "Healthy", "student_count": 97, "utilization_pct": 57.1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_0ebe7e188aa69b71198e92a46b4efc45.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["school_name", "student_count", "capacity", "utilization_pct", "status"];
+    let aliases = ["School", "Students", "Capacity", "Utilization %", "Status"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_0ebe7e188aa69b71198e92a46b4efc45.addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+            var marker_76a41db6d05c476b1854d9f3315b5f29 = L.marker(
+                [36.015, -78.965],
+                {
+}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_bc66747954f607bc902caff3b5e3473d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9974b893723e13f2b736d654ca5037c = $(`<div id="html_b9974b893723e13f2b736d654ca5037c" style="width: 100.0%; height: 100.0%;"><b>Riverdale Elementary</b><br>Capacity: 185<br>Students: 81<br>Utilization: 43.8%<br>Status: Healthy</div>`)[0];
+                popup_bc66747954f607bc902caff3b5e3473d.setContent(html_b9974b893723e13f2b736d654ca5037c);
+            
+        
+
+        marker_76a41db6d05c476b1854d9f3315b5f29.bindPopup(popup_bc66747954f607bc902caff3b5e3473d)
+        ;
+
+        
+    
+    
+            marker_76a41db6d05c476b1854d9f3315b5f29.bindTooltip(
+                `<div>
+                     Riverdale Elementary
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_34f68d3dc1fb1cac2c41c93215f0be13 = L.marker(
+                [36.035, -78.935],
+                {
+}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_ba9e42019b942d26341866865cdd7f72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1477e578b97b7a71af57ddbd0686f07 = $(`<div id="html_c1477e578b97b7a71af57ddbd0686f07" style="width: 100.0%; height: 100.0%;"><b>Oakridge Elementary</b><br>Capacity: 170<br>Students: 97<br>Utilization: 57.1%<br>Status: Healthy</div>`)[0];
+                popup_ba9e42019b942d26341866865cdd7f72.setContent(html_c1477e578b97b7a71af57ddbd0686f07);
+            
+        
+
+        marker_34f68d3dc1fb1cac2c41c93215f0be13.bindPopup(popup_ba9e42019b942d26341866865cdd7f72)
+        ;
+
+        
+    
+    
+            marker_34f68d3dc1fb1cac2c41c93215f0be13.bindTooltip(
+                `<div>
+                     Oakridge Elementary
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8562c1332a9f4b3c42ea82dc687a669e = L.circleMarker(
+                [36.0217, -78.961096],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_49c1136a6fc639444b2005581376ec80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c642a4748166c2d2a5f84ab3c1e037d = $(`<div id="html_5c642a4748166c2d2a5f84ab3c1e037d" style="width: 100.0%; height: 100.0%;">STU-0001 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_49c1136a6fc639444b2005581376ec80.setContent(html_5c642a4748166c2d2a5f84ab3c1e037d);
+            
+        
+
+        circle_marker_8562c1332a9f4b3c42ea82dc687a669e.bindPopup(popup_49c1136a6fc639444b2005581376ec80)
+        ;
+
+        
+    
+    
+            var circle_marker_cef34e5e4e8cedcaf5e95c9813a4c643 = L.circleMarker(
+                [36.023434, -78.954019],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_f186cf8af924f84701c6d553bb5380a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4cf315b833dcab1b6d13d9e0087c39a = $(`<div id="html_a4cf315b833dcab1b6d13d9e0087c39a" style="width: 100.0%; height: 100.0%;">STU-0002 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_f186cf8af924f84701c6d553bb5380a0.setContent(html_a4cf315b833dcab1b6d13d9e0087c39a);
+            
+        
+
+        circle_marker_cef34e5e4e8cedcaf5e95c9813a4c643.bindPopup(popup_f186cf8af924f84701c6d553bb5380a0)
+        ;
+
+        
+    
+    
+            var circle_marker_27a9e4492a78b3f423efe1cd492dc5ff = L.circleMarker(
+                [36.036715, -78.962143],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_b962e7550bce42c0bab3326839299125 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccd7e1f9e07f63dd2a1c2dee9d26eac1 = $(`<div id="html_ccd7e1f9e07f63dd2a1c2dee9d26eac1" style="width: 100.0%; height: 100.0%;">STU-0003 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_b962e7550bce42c0bab3326839299125.setContent(html_ccd7e1f9e07f63dd2a1c2dee9d26eac1);
+            
+        
+
+        circle_marker_27a9e4492a78b3f423efe1cd492dc5ff.bindPopup(popup_b962e7550bce42c0bab3326839299125)
+        ;
+
+        
+    
+    
+            var circle_marker_7d578c8837a32ca8c5230a45a02d2f8b = L.circleMarker(
+                [36.036715, -78.962143],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_ada11fbb1a1d9e80c12b4f1712c4b519 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b79a2fa207df9393b1c72c440cbe7ea4 = $(`<div id="html_b79a2fa207df9393b1c72c440cbe7ea4" style="width: 100.0%; height: 100.0%;">STU-0004 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_ada11fbb1a1d9e80c12b4f1712c4b519.setContent(html_b79a2fa207df9393b1c72c440cbe7ea4);
+            
+        
+
+        circle_marker_7d578c8837a32ca8c5230a45a02d2f8b.bindPopup(popup_ada11fbb1a1d9e80c12b4f1712c4b519)
+        ;
+
+        
+    
+    
+            var circle_marker_d2d0285756574d245a38a9e7243c5e61 = L.circleMarker(
+                [36.02547, -78.957753],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_60f08f44c6f066e6326082f90dd48809 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd19addbd6f9d498f18f24a10034f64c = $(`<div id="html_dd19addbd6f9d498f18f24a10034f64c" style="width: 100.0%; height: 100.0%;">STU-0005 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_60f08f44c6f066e6326082f90dd48809.setContent(html_dd19addbd6f9d498f18f24a10034f64c);
+            
+        
+
+        circle_marker_d2d0285756574d245a38a9e7243c5e61.bindPopup(popup_60f08f44c6f066e6326082f90dd48809)
+        ;
+
+        
+    
+    
+            var circle_marker_772aa0d4f76a7f6b54fd1d4268c0431c = L.circleMarker(
+                [36.031638, -78.976138],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_40ad9c2a1cb61444f791cf4b5e4cb7bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2587153e6cb731aecb7125cd1d7f8072 = $(`<div id="html_2587153e6cb731aecb7125cd1d7f8072" style="width: 100.0%; height: 100.0%;">STU-0006 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_40ad9c2a1cb61444f791cf4b5e4cb7bd.setContent(html_2587153e6cb731aecb7125cd1d7f8072);
+            
+        
+
+        circle_marker_772aa0d4f76a7f6b54fd1d4268c0431c.bindPopup(popup_40ad9c2a1cb61444f791cf4b5e4cb7bd)
+        ;
+
+        
+    
+    
+            var circle_marker_7d12292f62dc8b47fce9e9f9152ae3a8 = L.circleMarker(
+                [36.031638, -78.976138],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_7dcf63db846409736e709d854c34f5ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17027c228e44ba44c231d10434a8f091 = $(`<div id="html_17027c228e44ba44c231d10434a8f091" style="width: 100.0%; height: 100.0%;">STU-0007 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_7dcf63db846409736e709d854c34f5ab.setContent(html_17027c228e44ba44c231d10434a8f091);
+            
+        
+
+        circle_marker_7d12292f62dc8b47fce9e9f9152ae3a8.bindPopup(popup_7dcf63db846409736e709d854c34f5ab)
+        ;
+
+        
+    
+    
+            var circle_marker_a2ba046cc7ac564c4f6f8b6a54dac301 = L.circleMarker(
+                [36.029209, -78.976794],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_f889a7d01dd4f957dbe0141d8fbf83bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27d7d2b11b6a865958c3c4975f43f492 = $(`<div id="html_27d7d2b11b6a865958c3c4975f43f492" style="width: 100.0%; height: 100.0%;">STU-0008 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_f889a7d01dd4f957dbe0141d8fbf83bf.setContent(html_27d7d2b11b6a865958c3c4975f43f492);
+            
+        
+
+        circle_marker_a2ba046cc7ac564c4f6f8b6a54dac301.bindPopup(popup_f889a7d01dd4f957dbe0141d8fbf83bf)
+        ;
+
+        
+    
+    
+            var circle_marker_d20f868c9a9f083ecd127957b2eaaaa5 = L.circleMarker(
+                [36.029209, -78.976794],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_30b75037a87c8ab3dd1765926d0e1d14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af1ba182911db7ab449888b57eeece1a = $(`<div id="html_af1ba182911db7ab449888b57eeece1a" style="width: 100.0%; height: 100.0%;">STU-0009 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_30b75037a87c8ab3dd1765926d0e1d14.setContent(html_af1ba182911db7ab449888b57eeece1a);
+            
+        
+
+        circle_marker_d20f868c9a9f083ecd127957b2eaaaa5.bindPopup(popup_30b75037a87c8ab3dd1765926d0e1d14)
+        ;
+
+        
+    
+    
+            var circle_marker_3d6c5c9a557e77f6464c6a3e5efec791 = L.circleMarker(
+                [36.029103, -78.972619],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_d3cea479b36f2c0e3c3877d5008a3bd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aff7d3ed0dc238ce1bff30d51107db2d = $(`<div id="html_aff7d3ed0dc238ce1bff30d51107db2d" style="width: 100.0%; height: 100.0%;">STU-0010 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_d3cea479b36f2c0e3c3877d5008a3bd9.setContent(html_aff7d3ed0dc238ce1bff30d51107db2d);
+            
+        
+
+        circle_marker_3d6c5c9a557e77f6464c6a3e5efec791.bindPopup(popup_d3cea479b36f2c0e3c3877d5008a3bd9)
+        ;
+
+        
+    
+    
+            var circle_marker_5acf792be65e38a0c5ba5d36ac850352 = L.circleMarker(
+                [36.029103, -78.972619],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_8af87c151b1e49bb8b96cfe6bd8d62a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_048f222a644c367cf8227f81d14be020 = $(`<div id="html_048f222a644c367cf8227f81d14be020" style="width: 100.0%; height: 100.0%;">STU-0011 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_8af87c151b1e49bb8b96cfe6bd8d62a9.setContent(html_048f222a644c367cf8227f81d14be020);
+            
+        
+
+        circle_marker_5acf792be65e38a0c5ba5d36ac850352.bindPopup(popup_8af87c151b1e49bb8b96cfe6bd8d62a9)
+        ;
+
+        
+    
+    
+            var circle_marker_64958415570d2117060d6b273ca2169f = L.circleMarker(
+                [36.039765, -78.969052],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_67054883183f7b607b5e0872f9c2dcdf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38129da9e0e37ff8f6032dc100e517c9 = $(`<div id="html_38129da9e0e37ff8f6032dc100e517c9" style="width: 100.0%; height: 100.0%;">STU-0012 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_67054883183f7b607b5e0872f9c2dcdf.setContent(html_38129da9e0e37ff8f6032dc100e517c9);
+            
+        
+
+        circle_marker_64958415570d2117060d6b273ca2169f.bindPopup(popup_67054883183f7b607b5e0872f9c2dcdf)
+        ;
+
+        
+    
+    
+            var circle_marker_6250e69c1d2bf34f65cda60dc41ba546 = L.circleMarker(
+                [36.039765, -78.969052],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_eeb1771b959756e12501cf76de556ebd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77113ee5c4efbe05c9463feccd1c5b8a = $(`<div id="html_77113ee5c4efbe05c9463feccd1c5b8a" style="width: 100.0%; height: 100.0%;">STU-0013 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_eeb1771b959756e12501cf76de556ebd.setContent(html_77113ee5c4efbe05c9463feccd1c5b8a);
+            
+        
+
+        circle_marker_6250e69c1d2bf34f65cda60dc41ba546.bindPopup(popup_eeb1771b959756e12501cf76de556ebd)
+        ;
+
+        
+    
+    
+            var circle_marker_704106d50c94a5aef507939ffd9e2d77 = L.circleMarker(
+                [36.031625, -78.974425],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_112fee58d25574b3b5729247d5ba8658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d63f826baac30c0803102e9886a2fd0d = $(`<div id="html_d63f826baac30c0803102e9886a2fd0d" style="width: 100.0%; height: 100.0%;">STU-0014 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_112fee58d25574b3b5729247d5ba8658.setContent(html_d63f826baac30c0803102e9886a2fd0d);
+            
+        
+
+        circle_marker_704106d50c94a5aef507939ffd9e2d77.bindPopup(popup_112fee58d25574b3b5729247d5ba8658)
+        ;
+
+        
+    
+    
+            var circle_marker_ebdd87ab3d14437f5d7f21bdf38ee74b = L.circleMarker(
+                [36.031625, -78.974425],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_a1d050e8d7492612b8df200c2e12ff11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa1043fb103ee5ae3329d50359f32b59 = $(`<div id="html_fa1043fb103ee5ae3329d50359f32b59" style="width: 100.0%; height: 100.0%;">STU-0015 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_a1d050e8d7492612b8df200c2e12ff11.setContent(html_fa1043fb103ee5ae3329d50359f32b59);
+            
+        
+
+        circle_marker_ebdd87ab3d14437f5d7f21bdf38ee74b.bindPopup(popup_a1d050e8d7492612b8df200c2e12ff11)
+        ;
+
+        
+    
+    
+            var circle_marker_3ebbc17e7b52f2c7006485c985cf3365 = L.circleMarker(
+                [36.032233, -78.956459],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_b929fdb4f37fa5c9bee77219eab83671 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_256c24665a658ded884a4d8eb66251db = $(`<div id="html_256c24665a658ded884a4d8eb66251db" style="width: 100.0%; height: 100.0%;">STU-0016 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_b929fdb4f37fa5c9bee77219eab83671.setContent(html_256c24665a658ded884a4d8eb66251db);
+            
+        
+
+        circle_marker_3ebbc17e7b52f2c7006485c985cf3365.bindPopup(popup_b929fdb4f37fa5c9bee77219eab83671)
+        ;
+
+        
+    
+    
+            var circle_marker_e2a2cac32459a9607ad42c0285d52b9c = L.circleMarker(
+                [36.032233, -78.956459],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_148f3a2b368383f81ebdfdde48e4d032 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e77ba0fdf23eee85ae7ad0cd47c180f2 = $(`<div id="html_e77ba0fdf23eee85ae7ad0cd47c180f2" style="width: 100.0%; height: 100.0%;">STU-0017 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_148f3a2b368383f81ebdfdde48e4d032.setContent(html_e77ba0fdf23eee85ae7ad0cd47c180f2);
+            
+        
+
+        circle_marker_e2a2cac32459a9607ad42c0285d52b9c.bindPopup(popup_148f3a2b368383f81ebdfdde48e4d032)
+        ;
+
+        
+    
+    
+            var circle_marker_5e383117c74bf71aee20f9de192d1de8 = L.circleMarker(
+                [36.032233, -78.956459],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_9ff3f7d7fcc674bdaebb250ec6647e38 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77c0247f891de9d19a6d5bbcc1bab5e7 = $(`<div id="html_77c0247f891de9d19a6d5bbcc1bab5e7" style="width: 100.0%; height: 100.0%;">STU-0018 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_9ff3f7d7fcc674bdaebb250ec6647e38.setContent(html_77c0247f891de9d19a6d5bbcc1bab5e7);
+            
+        
+
+        circle_marker_5e383117c74bf71aee20f9de192d1de8.bindPopup(popup_9ff3f7d7fcc674bdaebb250ec6647e38)
+        ;
+
+        
+    
+    
+            var circle_marker_ad20d16c5c2de18b4a6c74672530bb64 = L.circleMarker(
+                [36.02491, -78.975],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_243a6b32f21eca04c825d644aff735ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fa8cdeac0967585a999d2e755459a33 = $(`<div id="html_8fa8cdeac0967585a999d2e755459a33" style="width: 100.0%; height: 100.0%;">STU-0019 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_243a6b32f21eca04c825d644aff735ab.setContent(html_8fa8cdeac0967585a999d2e755459a33);
+            
+        
+
+        circle_marker_ad20d16c5c2de18b4a6c74672530bb64.bindPopup(popup_243a6b32f21eca04c825d644aff735ab)
+        ;
+
+        
+    
+    
+            var circle_marker_0b49d3edc6686f6da5be188eff40674a = L.circleMarker(
+                [36.027141, -78.967817],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_8faffa3123cadfc43e5ad54d56f20837 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3aa4cbac7986463f03f320fe95667fa = $(`<div id="html_a3aa4cbac7986463f03f320fe95667fa" style="width: 100.0%; height: 100.0%;">STU-0020 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_8faffa3123cadfc43e5ad54d56f20837.setContent(html_a3aa4cbac7986463f03f320fe95667fa);
+            
+        
+
+        circle_marker_0b49d3edc6686f6da5be188eff40674a.bindPopup(popup_8faffa3123cadfc43e5ad54d56f20837)
+        ;
+
+        
+    
+    
+            var circle_marker_9f1c2bc49e3caa75b3de4cf6e17573d7 = L.circleMarker(
+                [36.025479, -78.97472],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_169d2819aa1dd127261173b7404081e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3956951028d9bbf2a75e7041be83e924 = $(`<div id="html_3956951028d9bbf2a75e7041be83e924" style="width: 100.0%; height: 100.0%;">STU-0021 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_169d2819aa1dd127261173b7404081e1.setContent(html_3956951028d9bbf2a75e7041be83e924);
+            
+        
+
+        circle_marker_9f1c2bc49e3caa75b3de4cf6e17573d7.bindPopup(popup_169d2819aa1dd127261173b7404081e1)
+        ;
+
+        
+    
+    
+            var circle_marker_23e834fb07bede3f1bf3e2d21398c752 = L.circleMarker(
+                [36.025479, -78.97472],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_776ba49c2e81c228737327c5ee342f6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee091016dc0880238c297e74623bb9f5 = $(`<div id="html_ee091016dc0880238c297e74623bb9f5" style="width: 100.0%; height: 100.0%;">STU-0022 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_776ba49c2e81c228737327c5ee342f6f.setContent(html_ee091016dc0880238c297e74623bb9f5);
+            
+        
+
+        circle_marker_23e834fb07bede3f1bf3e2d21398c752.bindPopup(popup_776ba49c2e81c228737327c5ee342f6f)
+        ;
+
+        
+    
+    
+            var circle_marker_5609e643566a615a52f077bf27e078cf = L.circleMarker(
+                [36.045102, -78.95181],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_ebef053cb50e2cf11ae76b264eded576 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95b5f27ff7d3b27d0096b5ec8c320598 = $(`<div id="html_95b5f27ff7d3b27d0096b5ec8c320598" style="width: 100.0%; height: 100.0%;">STU-0023 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_ebef053cb50e2cf11ae76b264eded576.setContent(html_95b5f27ff7d3b27d0096b5ec8c320598);
+            
+        
+
+        circle_marker_5609e643566a615a52f077bf27e078cf.bindPopup(popup_ebef053cb50e2cf11ae76b264eded576)
+        ;
+
+        
+    
+    
+            var circle_marker_92578117f07af14a0fb28e7e84fe88b7 = L.circleMarker(
+                [36.045102, -78.95181],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_e93891933a614f2f7220868c5cdad3cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a53cd06d06d2854ab9dd31150d0035d9 = $(`<div id="html_a53cd06d06d2854ab9dd31150d0035d9" style="width: 100.0%; height: 100.0%;">STU-0024 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_e93891933a614f2f7220868c5cdad3cd.setContent(html_a53cd06d06d2854ab9dd31150d0035d9);
+            
+        
+
+        circle_marker_92578117f07af14a0fb28e7e84fe88b7.bindPopup(popup_e93891933a614f2f7220868c5cdad3cd)
+        ;
+
+        
+    
+    
+            var circle_marker_6c0a53055d0bc1fa391b8c00b15b78b9 = L.circleMarker(
+                [36.033704, -78.966827],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_f0360583ac98e52f7164b63c6688b217 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f51393926e6364ff35364236e9d2bc31 = $(`<div id="html_f51393926e6364ff35364236e9d2bc31" style="width: 100.0%; height: 100.0%;">STU-0025 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_f0360583ac98e52f7164b63c6688b217.setContent(html_f51393926e6364ff35364236e9d2bc31);
+            
+        
+
+        circle_marker_6c0a53055d0bc1fa391b8c00b15b78b9.bindPopup(popup_f0360583ac98e52f7164b63c6688b217)
+        ;
+
+        
+    
+    
+            var circle_marker_224ea9bf7806c986c7fec2e7bee31a76 = L.circleMarker(
+                [36.02398, -78.964785],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_b3fa7506ba1c39c694ec437aafbc08b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef143babec1ea310b94c7b883f9e2ddf = $(`<div id="html_ef143babec1ea310b94c7b883f9e2ddf" style="width: 100.0%; height: 100.0%;">STU-0026 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_b3fa7506ba1c39c694ec437aafbc08b5.setContent(html_ef143babec1ea310b94c7b883f9e2ddf);
+            
+        
+
+        circle_marker_224ea9bf7806c986c7fec2e7bee31a76.bindPopup(popup_b3fa7506ba1c39c694ec437aafbc08b5)
+        ;
+
+        
+    
+    
+            var circle_marker_5b91804e4467b3803553129df712d15e = L.circleMarker(
+                [36.02398, -78.964785],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_83c610613a5e9e9ade584f51f936e761 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e0287f34a4b4555a46a96699ac9bd2e = $(`<div id="html_2e0287f34a4b4555a46a96699ac9bd2e" style="width: 100.0%; height: 100.0%;">STU-0027 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_83c610613a5e9e9ade584f51f936e761.setContent(html_2e0287f34a4b4555a46a96699ac9bd2e);
+            
+        
+
+        circle_marker_5b91804e4467b3803553129df712d15e.bindPopup(popup_83c610613a5e9e9ade584f51f936e761)
+        ;
+
+        
+    
+    
+            var circle_marker_e75b64c9342d574067781e3a932b056c = L.circleMarker(
+                [36.042802, -78.963897],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_d6675afe3f712f5fbb1c699843a0a498 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_882f684fbd1f3cf724be609eaa0cb370 = $(`<div id="html_882f684fbd1f3cf724be609eaa0cb370" style="width: 100.0%; height: 100.0%;">STU-0028 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_d6675afe3f712f5fbb1c699843a0a498.setContent(html_882f684fbd1f3cf724be609eaa0cb370);
+            
+        
+
+        circle_marker_e75b64c9342d574067781e3a932b056c.bindPopup(popup_d6675afe3f712f5fbb1c699843a0a498)
+        ;
+
+        
+    
+    
+            var circle_marker_a99ba306cee9217bfbc93987dbbfd99f = L.circleMarker(
+                [36.042802, -78.963897],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_a7c1787cb3669c972db205dff63f9a2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_070738e801622859e776394f76a747cf = $(`<div id="html_070738e801622859e776394f76a747cf" style="width: 100.0%; height: 100.0%;">STU-0029 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_a7c1787cb3669c972db205dff63f9a2a.setContent(html_070738e801622859e776394f76a747cf);
+            
+        
+
+        circle_marker_a99ba306cee9217bfbc93987dbbfd99f.bindPopup(popup_a7c1787cb3669c972db205dff63f9a2a)
+        ;
+
+        
+    
+    
+            var circle_marker_487ef1b2a2c0aa7dabe34ad883729a6d = L.circleMarker(
+                [36.027744, -78.972295],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_33bc501ed086584885ecdfdac2e28220 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_656d6f521b0520a9560e4e5e075240c6 = $(`<div id="html_656d6f521b0520a9560e4e5e075240c6" style="width: 100.0%; height: 100.0%;">STU-0030 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_33bc501ed086584885ecdfdac2e28220.setContent(html_656d6f521b0520a9560e4e5e075240c6);
+            
+        
+
+        circle_marker_487ef1b2a2c0aa7dabe34ad883729a6d.bindPopup(popup_33bc501ed086584885ecdfdac2e28220)
+        ;
+
+        
+    
+    
+            var circle_marker_21a2b79a2ab049937d8f000b60f44ff7 = L.circleMarker(
+                [36.035916, -78.951616],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_b8dc35ec349f72b4e03bb9d45956d926 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fdcc1fefe4db384323fd41b6055765a = $(`<div id="html_6fdcc1fefe4db384323fd41b6055765a" style="width: 100.0%; height: 100.0%;">STU-0031 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_b8dc35ec349f72b4e03bb9d45956d926.setContent(html_6fdcc1fefe4db384323fd41b6055765a);
+            
+        
+
+        circle_marker_21a2b79a2ab049937d8f000b60f44ff7.bindPopup(popup_b8dc35ec349f72b4e03bb9d45956d926)
+        ;
+
+        
+    
+    
+            var circle_marker_30e6669d429dccf843a56339e95c814e = L.circleMarker(
+                [36.035916, -78.951616],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_50972e9f8e81f619d6ef0989bd4c255b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57425664c41ebc994d4440298e8e3360 = $(`<div id="html_57425664c41ebc994d4440298e8e3360" style="width: 100.0%; height: 100.0%;">STU-0032 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_50972e9f8e81f619d6ef0989bd4c255b.setContent(html_57425664c41ebc994d4440298e8e3360);
+            
+        
+
+        circle_marker_30e6669d429dccf843a56339e95c814e.bindPopup(popup_50972e9f8e81f619d6ef0989bd4c255b)
+        ;
+
+        
+    
+    
+            var circle_marker_6cb1cbe6a8d7e04e3e6b49cffadc7915 = L.circleMarker(
+                [36.02693, -78.967152],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_1ecd80d25b260f67ab9ab94d59de2d48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_864b063fae5542cd2f1ea0cfa1c3d5c0 = $(`<div id="html_864b063fae5542cd2f1ea0cfa1c3d5c0" style="width: 100.0%; height: 100.0%;">STU-0033 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_1ecd80d25b260f67ab9ab94d59de2d48.setContent(html_864b063fae5542cd2f1ea0cfa1c3d5c0);
+            
+        
+
+        circle_marker_6cb1cbe6a8d7e04e3e6b49cffadc7915.bindPopup(popup_1ecd80d25b260f67ab9ab94d59de2d48)
+        ;
+
+        
+    
+    
+            var circle_marker_d60a3a52276df61300d8899693427e40 = L.circleMarker(
+                [36.02693, -78.967152],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_0a596957705ed3360023bf02ca29672c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8798192a7bde0faeffd3b77e8e512468 = $(`<div id="html_8798192a7bde0faeffd3b77e8e512468" style="width: 100.0%; height: 100.0%;">STU-0034 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_0a596957705ed3360023bf02ca29672c.setContent(html_8798192a7bde0faeffd3b77e8e512468);
+            
+        
+
+        circle_marker_d60a3a52276df61300d8899693427e40.bindPopup(popup_0a596957705ed3360023bf02ca29672c)
+        ;
+
+        
+    
+    
+            var circle_marker_181ee32e015fbb3074aa97a9d8447338 = L.circleMarker(
+                [36.027941, -78.966358],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_2de3daad206c456e1d5e52869876e4bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_049f499407de838bf22daf1a9e5eeaea = $(`<div id="html_049f499407de838bf22daf1a9e5eeaea" style="width: 100.0%; height: 100.0%;">STU-0035 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_2de3daad206c456e1d5e52869876e4bd.setContent(html_049f499407de838bf22daf1a9e5eeaea);
+            
+        
+
+        circle_marker_181ee32e015fbb3074aa97a9d8447338.bindPopup(popup_2de3daad206c456e1d5e52869876e4bd)
+        ;
+
+        
+    
+    
+            var circle_marker_4df55c36a004f60e87d3858d06b07dde = L.circleMarker(
+                [36.022988, -78.972834],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_99c455f737bce4b8d9324ecf0cfc8b41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0edc75cb7678b448bba5f6158a1a1bd6 = $(`<div id="html_0edc75cb7678b448bba5f6158a1a1bd6" style="width: 100.0%; height: 100.0%;">STU-0036 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_99c455f737bce4b8d9324ecf0cfc8b41.setContent(html_0edc75cb7678b448bba5f6158a1a1bd6);
+            
+        
+
+        circle_marker_4df55c36a004f60e87d3858d06b07dde.bindPopup(popup_99c455f737bce4b8d9324ecf0cfc8b41)
+        ;
+
+        
+    
+    
+            var circle_marker_b2201773c0018cc17080c2737f2bd1a3 = L.circleMarker(
+                [36.027664, -78.977016],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_2af0ac2538608d60b785869381bf3f90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab63bd9797ecd807719ef55c89341529 = $(`<div id="html_ab63bd9797ecd807719ef55c89341529" style="width: 100.0%; height: 100.0%;">STU-0037 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_2af0ac2538608d60b785869381bf3f90.setContent(html_ab63bd9797ecd807719ef55c89341529);
+            
+        
+
+        circle_marker_b2201773c0018cc17080c2737f2bd1a3.bindPopup(popup_2af0ac2538608d60b785869381bf3f90)
+        ;
+
+        
+    
+    
+            var circle_marker_63da6f580363abe295d7bf8fd4330218 = L.circleMarker(
+                [36.027804, -78.962866],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_58b07d6182d56e2d57aa86e3f5c34896 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e2ec14d8852fc59c956665ef85961d8 = $(`<div id="html_6e2ec14d8852fc59c956665ef85961d8" style="width: 100.0%; height: 100.0%;">STU-0038 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_58b07d6182d56e2d57aa86e3f5c34896.setContent(html_6e2ec14d8852fc59c956665ef85961d8);
+            
+        
+
+        circle_marker_63da6f580363abe295d7bf8fd4330218.bindPopup(popup_58b07d6182d56e2d57aa86e3f5c34896)
+        ;
+
+        
+    
+    
+            var circle_marker_81a504298bc020851bccc71bb83ebaea = L.circleMarker(
+                [36.032511, -78.96908],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_41c52b0c5221e5ffb8dc833d08c41d8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d357ac2e547accd3c70f78d3762a410 = $(`<div id="html_1d357ac2e547accd3c70f78d3762a410" style="width: 100.0%; height: 100.0%;">STU-0039 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_41c52b0c5221e5ffb8dc833d08c41d8e.setContent(html_1d357ac2e547accd3c70f78d3762a410);
+            
+        
+
+        circle_marker_81a504298bc020851bccc71bb83ebaea.bindPopup(popup_41c52b0c5221e5ffb8dc833d08c41d8e)
+        ;
+
+        
+    
+    
+            var circle_marker_e7f5fab01b1658c0fe60a04fafc46616 = L.circleMarker(
+                [36.043417, -78.95861],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_ec598c8abf1ac2fb5c9e5f146eac2ece = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6facc40e13c9ddf78657bd8f060f0922 = $(`<div id="html_6facc40e13c9ddf78657bd8f060f0922" style="width: 100.0%; height: 100.0%;">STU-0040 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_ec598c8abf1ac2fb5c9e5f146eac2ece.setContent(html_6facc40e13c9ddf78657bd8f060f0922);
+            
+        
+
+        circle_marker_e7f5fab01b1658c0fe60a04fafc46616.bindPopup(popup_ec598c8abf1ac2fb5c9e5f146eac2ece)
+        ;
+
+        
+    
+    
+            var circle_marker_4f3a51f5c23ac485282f1286d82cbf6e = L.circleMarker(
+                [36.028799, -78.967187],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_42d3b4f971c6915389c2229ea80b3d11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_243092e41e3e8f1cfce9d62c9d373679 = $(`<div id="html_243092e41e3e8f1cfce9d62c9d373679" style="width: 100.0%; height: 100.0%;">STU-0041 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_42d3b4f971c6915389c2229ea80b3d11.setContent(html_243092e41e3e8f1cfce9d62c9d373679);
+            
+        
+
+        circle_marker_4f3a51f5c23ac485282f1286d82cbf6e.bindPopup(popup_42d3b4f971c6915389c2229ea80b3d11)
+        ;
+
+        
+    
+    
+            var circle_marker_60ea4c572bdf4251feaa64230abd670d = L.circleMarker(
+                [36.036136, -78.96074],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_7430ba031475312d9e20e48d01987d7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f980eb38020138cf108cd8f969f6c5ce = $(`<div id="html_f980eb38020138cf108cd8f969f6c5ce" style="width: 100.0%; height: 100.0%;">STU-0042 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_7430ba031475312d9e20e48d01987d7b.setContent(html_f980eb38020138cf108cd8f969f6c5ce);
+            
+        
+
+        circle_marker_60ea4c572bdf4251feaa64230abd670d.bindPopup(popup_7430ba031475312d9e20e48d01987d7b)
+        ;
+
+        
+    
+    
+            var circle_marker_2b1af97f778e134a4ef1f2abad437677 = L.circleMarker(
+                [36.036136, -78.96074],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_a2b060dde9fc7207eb9ae0b0e90f3d39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c2db0aa29bb4b6eb482097b7899c587 = $(`<div id="html_9c2db0aa29bb4b6eb482097b7899c587" style="width: 100.0%; height: 100.0%;">STU-0043 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_a2b060dde9fc7207eb9ae0b0e90f3d39.setContent(html_9c2db0aa29bb4b6eb482097b7899c587);
+            
+        
+
+        circle_marker_2b1af97f778e134a4ef1f2abad437677.bindPopup(popup_a2b060dde9fc7207eb9ae0b0e90f3d39)
+        ;
+
+        
+    
+    
+            var circle_marker_64e76f0088c2bda1bcac6905899bb66a = L.circleMarker(
+                [36.036136, -78.96074],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_e5c0f14d9b020e643a74dcba6b0e421c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94c15a40e42f75c39a3e59a8b894d007 = $(`<div id="html_94c15a40e42f75c39a3e59a8b894d007" style="width: 100.0%; height: 100.0%;">STU-0044 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_e5c0f14d9b020e643a74dcba6b0e421c.setContent(html_94c15a40e42f75c39a3e59a8b894d007);
+            
+        
+
+        circle_marker_64e76f0088c2bda1bcac6905899bb66a.bindPopup(popup_e5c0f14d9b020e643a74dcba6b0e421c)
+        ;
+
+        
+    
+    
+            var circle_marker_f91be08122a580fbbb4990a3d5103577 = L.circleMarker(
+                [36.048589, -78.968389],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_c187d3e18508f58ed5337b983263c6c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00ea59f5a35f3102bc7f8549d1b952ce = $(`<div id="html_00ea59f5a35f3102bc7f8549d1b952ce" style="width: 100.0%; height: 100.0%;">STU-0045 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_c187d3e18508f58ed5337b983263c6c4.setContent(html_00ea59f5a35f3102bc7f8549d1b952ce);
+            
+        
+
+        circle_marker_f91be08122a580fbbb4990a3d5103577.bindPopup(popup_c187d3e18508f58ed5337b983263c6c4)
+        ;
+
+        
+    
+    
+            var circle_marker_e95db64f044310a486384c1674868434 = L.circleMarker(
+                [36.026317, -78.965373],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_1350548f0c3a62d211d1e828e81baed3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7861a39da7f83f3a3c01d423800f20b4 = $(`<div id="html_7861a39da7f83f3a3c01d423800f20b4" style="width: 100.0%; height: 100.0%;">STU-0046 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_1350548f0c3a62d211d1e828e81baed3.setContent(html_7861a39da7f83f3a3c01d423800f20b4);
+            
+        
+
+        circle_marker_e95db64f044310a486384c1674868434.bindPopup(popup_1350548f0c3a62d211d1e828e81baed3)
+        ;
+
+        
+    
+    
+            var circle_marker_301fc4748fb72458b3c5306bc6cb4345 = L.circleMarker(
+                [36.026317, -78.965373],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_29ea74bd1d800fe83ff64bd240b50e39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c64c956b4ca60a42d2bc4298fe996882 = $(`<div id="html_c64c956b4ca60a42d2bc4298fe996882" style="width: 100.0%; height: 100.0%;">STU-0047 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_29ea74bd1d800fe83ff64bd240b50e39.setContent(html_c64c956b4ca60a42d2bc4298fe996882);
+            
+        
+
+        circle_marker_301fc4748fb72458b3c5306bc6cb4345.bindPopup(popup_29ea74bd1d800fe83ff64bd240b50e39)
+        ;
+
+        
+    
+    
+            var circle_marker_17c6c4f5d9f0b2ef66d0afb81b7fd087 = L.circleMarker(
+                [36.03508, -78.962643],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_e8b9d31c721331fd1545b42e378c8f45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5aa3f8a474fe99d8c3494df861d76476 = $(`<div id="html_5aa3f8a474fe99d8c3494df861d76476" style="width: 100.0%; height: 100.0%;">STU-0048 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_e8b9d31c721331fd1545b42e378c8f45.setContent(html_5aa3f8a474fe99d8c3494df861d76476);
+            
+        
+
+        circle_marker_17c6c4f5d9f0b2ef66d0afb81b7fd087.bindPopup(popup_e8b9d31c721331fd1545b42e378c8f45)
+        ;
+
+        
+    
+    
+            var circle_marker_1e6fa53ad1283780bbe07c243184df31 = L.circleMarker(
+                [36.022903, -78.977081],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_2c3d9605878e50263221b74bdc53ba4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_223c02d55066af1dd09d167f0cae6c40 = $(`<div id="html_223c02d55066af1dd09d167f0cae6c40" style="width: 100.0%; height: 100.0%;">STU-0049 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_2c3d9605878e50263221b74bdc53ba4b.setContent(html_223c02d55066af1dd09d167f0cae6c40);
+            
+        
+
+        circle_marker_1e6fa53ad1283780bbe07c243184df31.bindPopup(popup_2c3d9605878e50263221b74bdc53ba4b)
+        ;
+
+        
+    
+    
+            var circle_marker_16a43fa6c431eda5257acfc47e581ea9 = L.circleMarker(
+                [36.008343, -78.962353],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_cffac7352ab4fc3ea7233c5a8157699b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_080121b762f25889f58d40657dbf2ce9 = $(`<div id="html_080121b762f25889f58d40657dbf2ce9" style="width: 100.0%; height: 100.0%;">STU-0050 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_cffac7352ab4fc3ea7233c5a8157699b.setContent(html_080121b762f25889f58d40657dbf2ce9);
+            
+        
+
+        circle_marker_16a43fa6c431eda5257acfc47e581ea9.bindPopup(popup_cffac7352ab4fc3ea7233c5a8157699b)
+        ;
+
+        
+    
+    
+            var circle_marker_f068d65d0c663f8796121a84e499382c = L.circleMarker(
+                [36.008343, -78.962353],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_88b045dc7bc26092c81d074beabc558e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a26a7fdf0c02468ae93f4874d7c36ac = $(`<div id="html_3a26a7fdf0c02468ae93f4874d7c36ac" style="width: 100.0%; height: 100.0%;">STU-0051 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_88b045dc7bc26092c81d074beabc558e.setContent(html_3a26a7fdf0c02468ae93f4874d7c36ac);
+            
+        
+
+        circle_marker_f068d65d0c663f8796121a84e499382c.bindPopup(popup_88b045dc7bc26092c81d074beabc558e)
+        ;
+
+        
+    
+    
+            var circle_marker_9fe48300eff1b299a02fb4c50b86290d = L.circleMarker(
+                [35.998437, -78.970203],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_e0bedfb1926b6fff28827fbef4c1521f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_142b275b12a9ba51d1976edc99998945 = $(`<div id="html_142b275b12a9ba51d1976edc99998945" style="width: 100.0%; height: 100.0%;">STU-0052 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_e0bedfb1926b6fff28827fbef4c1521f.setContent(html_142b275b12a9ba51d1976edc99998945);
+            
+        
+
+        circle_marker_9fe48300eff1b299a02fb4c50b86290d.bindPopup(popup_e0bedfb1926b6fff28827fbef4c1521f)
+        ;
+
+        
+    
+    
+            var circle_marker_25c46fadfcc4aa39bd287ac4012fe4b4 = L.circleMarker(
+                [35.998437, -78.970203],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_ce9b47ee1fcfa8f33fbef02411ab7088 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a08f08d0beca67688e9393800e33c5a = $(`<div id="html_0a08f08d0beca67688e9393800e33c5a" style="width: 100.0%; height: 100.0%;">STU-0053 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_ce9b47ee1fcfa8f33fbef02411ab7088.setContent(html_0a08f08d0beca67688e9393800e33c5a);
+            
+        
+
+        circle_marker_25c46fadfcc4aa39bd287ac4012fe4b4.bindPopup(popup_ce9b47ee1fcfa8f33fbef02411ab7088)
+        ;
+
+        
+    
+    
+            var circle_marker_fac7ee48414515aa5e6f9d92bd1e874b = L.circleMarker(
+                [36.018891, -78.951043],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_5d47f04dae6b89b80208c30768acb49f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3c812bd35b0d542270364fdb44b212b = $(`<div id="html_d3c812bd35b0d542270364fdb44b212b" style="width: 100.0%; height: 100.0%;">STU-0054 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_5d47f04dae6b89b80208c30768acb49f.setContent(html_d3c812bd35b0d542270364fdb44b212b);
+            
+        
+
+        circle_marker_fac7ee48414515aa5e6f9d92bd1e874b.bindPopup(popup_5d47f04dae6b89b80208c30768acb49f)
+        ;
+
+        
+    
+    
+            var circle_marker_10bb8d4191e87ed88268d7be5b5be724 = L.circleMarker(
+                [36.01562, -78.954336],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_0daf45c8306d842c78724e51f903da21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5554cf6adcff7e538b4cb347700a7d1a = $(`<div id="html_5554cf6adcff7e538b4cb347700a7d1a" style="width: 100.0%; height: 100.0%;">STU-0055 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_0daf45c8306d842c78724e51f903da21.setContent(html_5554cf6adcff7e538b4cb347700a7d1a);
+            
+        
+
+        circle_marker_10bb8d4191e87ed88268d7be5b5be724.bindPopup(popup_0daf45c8306d842c78724e51f903da21)
+        ;
+
+        
+    
+    
+            var circle_marker_c3860bcf237a2d7259bca32cec1833c1 = L.circleMarker(
+                [36.018643, -78.961873],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_58d202a53bfe5ecd49aec5a06333e580 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1352750b27d62a303e46143777a9b35a = $(`<div id="html_1352750b27d62a303e46143777a9b35a" style="width: 100.0%; height: 100.0%;">STU-0056 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_58d202a53bfe5ecd49aec5a06333e580.setContent(html_1352750b27d62a303e46143777a9b35a);
+            
+        
+
+        circle_marker_c3860bcf237a2d7259bca32cec1833c1.bindPopup(popup_58d202a53bfe5ecd49aec5a06333e580)
+        ;
+
+        
+    
+    
+            var circle_marker_63f2c1041310327bbe1907c43a0e4d3a = L.circleMarker(
+                [36.015588, -78.9761],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_9a0c6deefdea55fe9b6aeb39f15943bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87fd61a36ae096e44ec6083d68ab5e5a = $(`<div id="html_87fd61a36ae096e44ec6083d68ab5e5a" style="width: 100.0%; height: 100.0%;">STU-0057 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_9a0c6deefdea55fe9b6aeb39f15943bc.setContent(html_87fd61a36ae096e44ec6083d68ab5e5a);
+            
+        
+
+        circle_marker_63f2c1041310327bbe1907c43a0e4d3a.bindPopup(popup_9a0c6deefdea55fe9b6aeb39f15943bc)
+        ;
+
+        
+    
+    
+            var circle_marker_4bb083ebe01f888c0ac97b47d8c6db61 = L.circleMarker(
+                [36.015588, -78.9761],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_2b157c7cb58c4e9d9ccc09e2559b4d05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_257614f1369f2c43b4ce1fb6313aa129 = $(`<div id="html_257614f1369f2c43b4ce1fb6313aa129" style="width: 100.0%; height: 100.0%;">STU-0058 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_2b157c7cb58c4e9d9ccc09e2559b4d05.setContent(html_257614f1369f2c43b4ce1fb6313aa129);
+            
+        
+
+        circle_marker_4bb083ebe01f888c0ac97b47d8c6db61.bindPopup(popup_2b157c7cb58c4e9d9ccc09e2559b4d05)
+        ;
+
+        
+    
+    
+            var circle_marker_e7b3cca7bdb593fe24c9055ecd9a98b3 = L.circleMarker(
+                [35.996701, -78.958907],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_dbbfb7ae2d7dc958b4dc01ae38b0839e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d012352e9aadf685e1902703697b27d9 = $(`<div id="html_d012352e9aadf685e1902703697b27d9" style="width: 100.0%; height: 100.0%;">STU-0059 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_dbbfb7ae2d7dc958b4dc01ae38b0839e.setContent(html_d012352e9aadf685e1902703697b27d9);
+            
+        
+
+        circle_marker_e7b3cca7bdb593fe24c9055ecd9a98b3.bindPopup(popup_dbbfb7ae2d7dc958b4dc01ae38b0839e)
+        ;
+
+        
+    
+    
+            var circle_marker_6e56b6c1886118f811db209b42b06a8e = L.circleMarker(
+                [36.00286, -78.976416],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_96890ef7be76b35f586f6d687843c1b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79d0965ef0bc6af4d149809bc20d019b = $(`<div id="html_79d0965ef0bc6af4d149809bc20d019b" style="width: 100.0%; height: 100.0%;">STU-0060 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_96890ef7be76b35f586f6d687843c1b7.setContent(html_79d0965ef0bc6af4d149809bc20d019b);
+            
+        
+
+        circle_marker_6e56b6c1886118f811db209b42b06a8e.bindPopup(popup_96890ef7be76b35f586f6d687843c1b7)
+        ;
+
+        
+    
+    
+            var circle_marker_c55d8f86bb60ea30b3e08cf630cf5f8a = L.circleMarker(
+                [36.003371, -78.974476],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_25d30d97087648804cb8260ca4f7f6c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44121b64472bf343d4b9af17b27ae355 = $(`<div id="html_44121b64472bf343d4b9af17b27ae355" style="width: 100.0%; height: 100.0%;">STU-0061 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_25d30d97087648804cb8260ca4f7f6c3.setContent(html_44121b64472bf343d4b9af17b27ae355);
+            
+        
+
+        circle_marker_c55d8f86bb60ea30b3e08cf630cf5f8a.bindPopup(popup_25d30d97087648804cb8260ca4f7f6c3)
+        ;
+
+        
+    
+    
+            var circle_marker_023cade2f7545cc7b0f01d1c9e5715e5 = L.circleMarker(
+                [36.003371, -78.974476],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_9f90c40a3385bc71bbda5d62b3c9ea8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10bdcbe8d883cd32517a3c65149be040 = $(`<div id="html_10bdcbe8d883cd32517a3c65149be040" style="width: 100.0%; height: 100.0%;">STU-0062 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_9f90c40a3385bc71bbda5d62b3c9ea8e.setContent(html_10bdcbe8d883cd32517a3c65149be040);
+            
+        
+
+        circle_marker_023cade2f7545cc7b0f01d1c9e5715e5.bindPopup(popup_9f90c40a3385bc71bbda5d62b3c9ea8e)
+        ;
+
+        
+    
+    
+            var circle_marker_df2ad377b9d3f2c1a00cdca5b1a1b1fe = L.circleMarker(
+                [36.00731, -78.955631],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_3048ce4732017b4f5785a736ecb14767 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_634bf4ecd69ce03cae5ca63ef6ee70f9 = $(`<div id="html_634bf4ecd69ce03cae5ca63ef6ee70f9" style="width: 100.0%; height: 100.0%;">STU-0063 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_3048ce4732017b4f5785a736ecb14767.setContent(html_634bf4ecd69ce03cae5ca63ef6ee70f9);
+            
+        
+
+        circle_marker_df2ad377b9d3f2c1a00cdca5b1a1b1fe.bindPopup(popup_3048ce4732017b4f5785a736ecb14767)
+        ;
+
+        
+    
+    
+            var circle_marker_f83d6576c6826308d65c07874aaba2f6 = L.circleMarker(
+                [35.996882, -78.95383],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_2b97990b870e75a79c6f44584207104f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af73d70807007dff1e4dd4264bb05cb9 = $(`<div id="html_af73d70807007dff1e4dd4264bb05cb9" style="width: 100.0%; height: 100.0%;">STU-0064 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_2b97990b870e75a79c6f44584207104f.setContent(html_af73d70807007dff1e4dd4264bb05cb9);
+            
+        
+
+        circle_marker_f83d6576c6826308d65c07874aaba2f6.bindPopup(popup_2b97990b870e75a79c6f44584207104f)
+        ;
+
+        
+    
+    
+            var circle_marker_b66390a322a357620ced6df03d2dcf7c = L.circleMarker(
+                [36.011985, -78.951733],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_722dde2a0069291acc6d474f8bfb92e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01743a9e535473b93a5413be427c028b = $(`<div id="html_01743a9e535473b93a5413be427c028b" style="width: 100.0%; height: 100.0%;">STU-0065 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_722dde2a0069291acc6d474f8bfb92e6.setContent(html_01743a9e535473b93a5413be427c028b);
+            
+        
+
+        circle_marker_b66390a322a357620ced6df03d2dcf7c.bindPopup(popup_722dde2a0069291acc6d474f8bfb92e6)
+        ;
+
+        
+    
+    
+            var circle_marker_f2a2755b1eea9e27f78e76c8d7e2ae45 = L.circleMarker(
+                [36.011985, -78.951733],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_cf481f112e1c4816d130159f4e28fa85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b86a29dd74c6c43c65630a226d9b14dd = $(`<div id="html_b86a29dd74c6c43c65630a226d9b14dd" style="width: 100.0%; height: 100.0%;">STU-0066 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_cf481f112e1c4816d130159f4e28fa85.setContent(html_b86a29dd74c6c43c65630a226d9b14dd);
+            
+        
+
+        circle_marker_f2a2755b1eea9e27f78e76c8d7e2ae45.bindPopup(popup_cf481f112e1c4816d130159f4e28fa85)
+        ;
+
+        
+    
+    
+            var circle_marker_cc92676e11e3e35dd6adcbd3401c1933 = L.circleMarker(
+                [36.011985, -78.951733],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_8cee6a24218c9cc0e47d2a61e493f564 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c83e494af80f54a1113722e39813c0b = $(`<div id="html_6c83e494af80f54a1113722e39813c0b" style="width: 100.0%; height: 100.0%;">STU-0067 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_8cee6a24218c9cc0e47d2a61e493f564.setContent(html_6c83e494af80f54a1113722e39813c0b);
+            
+        
+
+        circle_marker_cc92676e11e3e35dd6adcbd3401c1933.bindPopup(popup_8cee6a24218c9cc0e47d2a61e493f564)
+        ;
+
+        
+    
+    
+            var circle_marker_2a0b1991d911f7e4a7e15c9a819478b4 = L.circleMarker(
+                [36.013701, -78.954806],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_55fa7789e23147adcba98f53e45bdbdf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de2d3c89260d36f8d9561bcc51c3eed9 = $(`<div id="html_de2d3c89260d36f8d9561bcc51c3eed9" style="width: 100.0%; height: 100.0%;">STU-0068 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_55fa7789e23147adcba98f53e45bdbdf.setContent(html_de2d3c89260d36f8d9561bcc51c3eed9);
+            
+        
+
+        circle_marker_2a0b1991d911f7e4a7e15c9a819478b4.bindPopup(popup_55fa7789e23147adcba98f53e45bdbdf)
+        ;
+
+        
+    
+    
+            var circle_marker_92165d4046a2b9f3cb4e3c27b18ca9cd = L.circleMarker(
+                [36.013701, -78.954806],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_c84e2fe7ae02c992eceeca4727c5922d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aec0848587db08cd65ad155aea580b6b = $(`<div id="html_aec0848587db08cd65ad155aea580b6b" style="width: 100.0%; height: 100.0%;">STU-0069 | Grade 1 | Riverdale Elementary</div>`)[0];
+                popup_c84e2fe7ae02c992eceeca4727c5922d.setContent(html_aec0848587db08cd65ad155aea580b6b);
+            
+        
+
+        circle_marker_92165d4046a2b9f3cb4e3c27b18ca9cd.bindPopup(popup_c84e2fe7ae02c992eceeca4727c5922d)
+        ;
+
+        
+    
+    
+            var circle_marker_5a2612c81f45ae8ce16beb7cdbf63778 = L.circleMarker(
+                [36.003888, -78.956136],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_4519a2e9f41a93648d4fac19f2f168ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1af72cc794a20c3e186c4cd2fadef0f = $(`<div id="html_b1af72cc794a20c3e186c4cd2fadef0f" style="width: 100.0%; height: 100.0%;">STU-0070 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_4519a2e9f41a93648d4fac19f2f168ad.setContent(html_b1af72cc794a20c3e186c4cd2fadef0f);
+            
+        
+
+        circle_marker_5a2612c81f45ae8ce16beb7cdbf63778.bindPopup(popup_4519a2e9f41a93648d4fac19f2f168ad)
+        ;
+
+        
+    
+    
+            var circle_marker_c8d26c846f905d689a7a57fe01dfea3c = L.circleMarker(
+                [35.992944, -78.971199],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_e70401c74633d87f4ce65bda0cab2478 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83d7290f4c03bf56c7d022327fc71060 = $(`<div id="html_83d7290f4c03bf56c7d022327fc71060" style="width: 100.0%; height: 100.0%;">STU-0071 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_e70401c74633d87f4ce65bda0cab2478.setContent(html_83d7290f4c03bf56c7d022327fc71060);
+            
+        
+
+        circle_marker_c8d26c846f905d689a7a57fe01dfea3c.bindPopup(popup_e70401c74633d87f4ce65bda0cab2478)
+        ;
+
+        
+    
+    
+            var circle_marker_d6224e8163144628c85fc64e57cdc449 = L.circleMarker(
+                [36.006014, -78.951528],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_288d68c47874dbfffc49d1570c8449ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7e75f393030f46b9ec80d389b3e8a66 = $(`<div id="html_f7e75f393030f46b9ec80d389b3e8a66" style="width: 100.0%; height: 100.0%;">STU-0072 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_288d68c47874dbfffc49d1570c8449ce.setContent(html_f7e75f393030f46b9ec80d389b3e8a66);
+            
+        
+
+        circle_marker_d6224e8163144628c85fc64e57cdc449.bindPopup(popup_288d68c47874dbfffc49d1570c8449ce)
+        ;
+
+        
+    
+    
+            var circle_marker_9ed70fbe7e13442d31de8ddd2db4a9cf = L.circleMarker(
+                [36.006014, -78.951528],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_f99481fec4aa6d0be3913f8c4afe526f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce310a08a9fb922a9184e110a422151b = $(`<div id="html_ce310a08a9fb922a9184e110a422151b" style="width: 100.0%; height: 100.0%;">STU-0073 | Grade K | Riverdale Elementary</div>`)[0];
+                popup_f99481fec4aa6d0be3913f8c4afe526f.setContent(html_ce310a08a9fb922a9184e110a422151b);
+            
+        
+
+        circle_marker_9ed70fbe7e13442d31de8ddd2db4a9cf.bindPopup(popup_f99481fec4aa6d0be3913f8c4afe526f)
+        ;
+
+        
+    
+    
+            var circle_marker_aabee594a168f2fb8d0f2ed1b08310ca = L.circleMarker(
+                [36.000679, -78.962296],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_4e570352c0acd1430313fa6c5865ac33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd29ea43494f735c38723ad9f3cbbb3f = $(`<div id="html_fd29ea43494f735c38723ad9f3cbbb3f" style="width: 100.0%; height: 100.0%;">STU-0074 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_4e570352c0acd1430313fa6c5865ac33.setContent(html_fd29ea43494f735c38723ad9f3cbbb3f);
+            
+        
+
+        circle_marker_aabee594a168f2fb8d0f2ed1b08310ca.bindPopup(popup_4e570352c0acd1430313fa6c5865ac33)
+        ;
+
+        
+    
+    
+            var circle_marker_d6391f9814dbed3b53527841d7ef489b = L.circleMarker(
+                [35.996322, -78.953814],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_5c79f62b591e87e9c94609d5ffa3b706 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00b53440818d4a8e7d5db85d5e2b680a = $(`<div id="html_00b53440818d4a8e7d5db85d5e2b680a" style="width: 100.0%; height: 100.0%;">STU-0075 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_5c79f62b591e87e9c94609d5ffa3b706.setContent(html_00b53440818d4a8e7d5db85d5e2b680a);
+            
+        
+
+        circle_marker_d6391f9814dbed3b53527841d7ef489b.bindPopup(popup_5c79f62b591e87e9c94609d5ffa3b706)
+        ;
+
+        
+    
+    
+            var circle_marker_6eed04cb4a44f79a7caff6361f6f55cf = L.circleMarker(
+                [36.017327, -78.959768],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_ef1fd082f84628353b89a3a318fd62de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ab9d3501ee18bd7acbc36a2516016c7 = $(`<div id="html_5ab9d3501ee18bd7acbc36a2516016c7" style="width: 100.0%; height: 100.0%;">STU-0076 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_ef1fd082f84628353b89a3a318fd62de.setContent(html_5ab9d3501ee18bd7acbc36a2516016c7);
+            
+        
+
+        circle_marker_6eed04cb4a44f79a7caff6361f6f55cf.bindPopup(popup_ef1fd082f84628353b89a3a318fd62de)
+        ;
+
+        
+    
+    
+            var circle_marker_4c646f8bdf42a1bcf89809a74285c92c = L.circleMarker(
+                [36.008448, -78.953218],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_0e08870acfb99adc6a15fa0d3d4e0ec9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c132a2cf04de7e48a7ede5b67350a22c = $(`<div id="html_c132a2cf04de7e48a7ede5b67350a22c" style="width: 100.0%; height: 100.0%;">STU-0077 | Grade 2 | Riverdale Elementary</div>`)[0];
+                popup_0e08870acfb99adc6a15fa0d3d4e0ec9.setContent(html_c132a2cf04de7e48a7ede5b67350a22c);
+            
+        
+
+        circle_marker_4c646f8bdf42a1bcf89809a74285c92c.bindPopup(popup_0e08870acfb99adc6a15fa0d3d4e0ec9)
+        ;
+
+        
+    
+    
+            var circle_marker_7e3c3315aba29a93b206696d375e7a9d = L.circleMarker(
+                [36.008448, -78.953218],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_613155ffa77263298768c9f2f6188312 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b414cd90d7feeccf9deea7eb34bf3b5a = $(`<div id="html_b414cd90d7feeccf9deea7eb34bf3b5a" style="width: 100.0%; height: 100.0%;">STU-0078 | Grade 3 | Riverdale Elementary</div>`)[0];
+                popup_613155ffa77263298768c9f2f6188312.setContent(html_b414cd90d7feeccf9deea7eb34bf3b5a);
+            
+        
+
+        circle_marker_7e3c3315aba29a93b206696d375e7a9d.bindPopup(popup_613155ffa77263298768c9f2f6188312)
+        ;
+
+        
+    
+    
+            var circle_marker_b7e884c82dacf6d87907b063a2452e58 = L.circleMarker(
+                [36.006524, -78.959478],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_2013621ec3234ecd034168abe9ad36bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3dccd1d587ff9462a8421661a44b7ad = $(`<div id="html_b3dccd1d587ff9462a8421661a44b7ad" style="width: 100.0%; height: 100.0%;">STU-0079 | Grade 5 | Riverdale Elementary</div>`)[0];
+                popup_2013621ec3234ecd034168abe9ad36bd.setContent(html_b3dccd1d587ff9462a8421661a44b7ad);
+            
+        
+
+        circle_marker_b7e884c82dacf6d87907b063a2452e58.bindPopup(popup_2013621ec3234ecd034168abe9ad36bd)
+        ;
+
+        
+    
+    
+            var circle_marker_a8b0455b5c70d14c4524b8a3f9c8632a = L.circleMarker(
+                [36.006524, -78.959478],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+        
+    
+        var popup_cf7ddc2c6ee75f5b3e57f6bd637610c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0441764be50dd9efc30688970e458c79 = $(`<div id="html_0441764be50dd9efc30688970e458c79" style="width: 100.0%; height: 100.0%;">STU-0080 | Grade 4 | Riverdale Elementary</div>`)[0];
+                popup_cf7ddc2c6ee75f5b3e57f6bd637610c6.setContent(html_0441764be50dd9efc30688970e458c79);
+            
+        
+
+        circle_marker_a8b0455b5c70d14c4524b8a3f9c8632a.bindPopup(popup_cf7ddc2c6ee75f5b3e57f6bd637610c6)
+        ;
+
+        
+    
+    
+            var layer_control_bdf4a9ef73d3f44881123bd402ea4d59_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_b8bae55840d61e1c0bf8d28c9fc44e2d,
+                },
+                overlays :  {
+                    "Attendance boundaries" : geo_json_0ebe7e188aa69b71198e92a46b4efc45,
+                },
+            };
+            let layer_control_bdf4a9ef73d3f44881123bd402ea4d59 = L.control.layers(
+                layer_control_bdf4a9ef73d3f44881123bd402ea4d59_layers.base_layers,
+                layer_control_bdf4a9ef73d3f44881123bd402ea4d59_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_8c0296641fb289cc49fd81a20b50b511);
+
+        
+</script>
+</html>
